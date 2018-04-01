@@ -7,7 +7,7 @@ module.exports =
     @themeSet = false
 
     # ONCE PACKAGE IS LOADED
-    if self.isLoaded('seti-syntax')
+    if self.isLoaded('an-old-hope-seti-syntax')
 
       # WHEN SYNTAX THEME CHANGES
       atom.config.onDidChange 'seti-syntax.themeColor', (value) ->
@@ -76,7 +76,7 @@ module.exports =
         cb pkg
 
   # GET INFO ABOUT OUR PACKAGE
-  package: atom.packages.getLoadedPackage('seti-syntax')
+  package: atom.packages.getLoadedPackage('an-old-hope-seti-syntax')
 
   # DETERMINE IF A SPECIFIC PACKAGE HAS BEEN LOADED
   packageInfo: (which) ->
