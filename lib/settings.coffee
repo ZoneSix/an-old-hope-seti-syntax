@@ -10,11 +10,11 @@ module.exports =
     if self.isLoaded('an-old-hope-seti-syntax')
 
       # WHEN SYNTAX THEME CHANGES
-      atom.config.onDidChange 'seti-syntax.themeColor', (value) ->
+      atom.config.onDidChange 'an-old-hope-seti-syntax.themeColor', (value) ->
         self.setTheme value.newValue, value.oldValue, true
 
       # WHEN DYNAMIC THEME IS ENABLED OR DISABLED
-      atom.config.onDidChange 'seti-syntax.dynamicColor', (value) ->
+      atom.config.onDidChange 'an-old-hope-seti-syntax.dynamicColor', (value) ->
         # IF DYNIMIC IS ALLWOED
         if (value.newValue)
           newColor = atom.config.get('seti-ui.themeColor')
@@ -22,8 +22,8 @@ module.exports =
         # IF DYNAMIC IS NOT ALLOWED
         else
           # IF SYNTAX COLOR HAS BEEN SET
-          if (atom.config.get('seti-syntax.themeColor'))
-            newColor = atom.config.get('seti-syntax.themeColor')
+          if (atom.config.get('an-old-hope-seti-syntax.themeColor'))
+            newColor = atom.config.get('an-old-hope-seti-syntax.themeColor')
           # FALLBACK TP DEFAULT COLO IF NONE SET
           else
             newColor = 'default'
@@ -33,27 +33,27 @@ module.exports =
       if self.isLoaded('seti-ui')
 
         # IF DYNAMIC THEM IS ALLOWED
-        if atom.config.get('seti-syntax.dynamicColor') and not @themeSet
+        if atom.config.get('an-old-hope-seti-syntax.dynamicColor') and not @themeSet
           # SET SYNTAX THEME TO MATCH UI
           self.setTheme atom.config.get('seti-ui.themeColor'), false, false
 
         # WHEN UI THEME CHANGES
         atom.config.onDidChange 'seti-ui.themeColor', (value) ->
           # IF DYNAMIC THEM IS ALLOWED
-          if atom.config.get('seti-syntax.dynamicColor')
+          if atom.config.get('an-old-hope-seti-syntax.dynamicColor')
             # SET SYNTAX THEME TO MATCH UI
             self.setTheme value.newValue, value.oldValue, false
 
         # IF SETI UI IS DEACTIVATED
         self.onDeactivate 'seti-ui', ->
           # IF DYNAMIC THEM WAS ALLOWED
-          if atom.config.get('seti-syntax.dynamicColor')
+          if atom.config.get('an-old-hope-seti-syntax.dynamicColor')
             # SET THEME TO DEFAULT
             self.setTheme 'default', false, false
 
       # SET USER THEME IS NOT SET DYNAMICALLY
-      if (atom.config.get('seti-syntax.themeColor')) and not @themeSet
-        self.setTheme atom.config.get('seti-syntax.themeColor'), false, false
+      if (atom.config.get('an-old-hope-seti-syntax.themeColor')) and not @themeSet
+        self.setTheme atom.config.get('an-old-hope-seti-syntax.themeColor'), false, false
 
       # IF ALL ELSE HAS FAILED, LOAD THE DEFAULT THEME
       else if (not @themeSet)
