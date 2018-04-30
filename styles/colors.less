@@ -42,7 +42,7 @@
 @selected: @color1-highlight; // selected background color
 @selected-border: darken(@color1-highlight, 10);
 @selected-line: rgba(0,0,0,0.2);
-@selected-text: @color1-text;
+@selected-text: #ffffff; // FIXME: Make variable // NOTE: Unused?
 
 
 // SEARCH
@@ -51,7 +51,7 @@
 @search-active-bg: @color1;
 @search-active-border: solid 1px @color1;
 @search-item-border: @color1;
-@search-item-bg: @color3;
+@search-item-bg: @color1;
 
 
 // SYNTAX COLORS
@@ -59,21 +59,21 @@
 @comment: @grey; // comments, duhr.
 @comment-bg: none;
 @comment-punc: @comment;
-@constant: @color3; // true of var x = true, {{}} of {{> hbs_include}}
-@entity: @color5; // exports of module.exports, <div id= of <div id="#id">, . of .className
-@entity-function: @color5;
+@constant: @color1; // true of var x = true, {{}} of {{> hbs_include}}
+@entity: @color1; // exports of module.exports, <div id= of <div id="#id">, . of .className
+@entity-function: @color1;
 @error-punc: darken(@error, 20%);
 @function: @entity-function;
 @function-param: @color1; // (one, two, three) of function (one, two, three)
 @meta: @code-font-color; // none of border: none;
-@numeric: @color3;
+@numeric: @color1;
 @punctuation: darken(@code-font-color, 30%);
 @regex: @color1;
 @string: @color1; // 'value' of var='value', "name.png" or src="name.png"
 @storage: @white; // var of var a = b;
-@support: @color3; // module of module.exports, color of color: rgb(0,0,0)
+@support: @color1; // module of module.exports, color of color: rgb(0,0,0)
 @variable: @color1; // foo of function(foo), hbs_include of {{> hbs_include}}, http://dom.com/ of url(http://dom.com/)
-@storage-function: @color8;
+@storage-function: @color1;
 
 // obj.param.function() - @obj-name . @obj-method . @function
 @obj-name: @support;
@@ -87,11 +87,11 @@
 @entity-name-tag: @color1;
 @entity-name-type: @color1;
 @entity-name-function: @function;
-@entity-other-attribute-name: @color2;
+@entity-other-attribute-name: @color1;
 @entity-other-id: @id;
 
 // META
-@meta-control-flow: @color2;
+@meta-control-flow: @color1;
 
 // STRING
 @string-quoted-double: @quotes;
@@ -109,25 +109,25 @@
 @storage-function: @storage;
 
 // KEYWORD
-@keyword: @color4;
-@keyword-control: @color2;
+@keyword: @color1;
+@keyword-control: @color1;
 @keyword-other-important: @red;
 @keyword-operator: @keyword;
 @keyword-operator-assignment: @punctuation;
-@keyword-operator-new: @color8;
-@variable-import: @color2;
+@keyword-operator-new: @color1;
+@variable-import: @color1;
 
 // SUPPORT
 @support-type-property-name: @code-font-color;
 @support-function-decl: @color1;
 
 // VARIABLE
-@variable: @color8;
-@variable-other: @color4;
-@variable-other-module: @color3;
+@variable: @color1;
+@variable-other: @color1;
+@variable-other-module: @color1;
 @variable-other-module-alias: @color1;
-@variable-other-object: @color2;
-@variable-other-property: @color4;
+@variable-other-object: @color1;
+@variable-other-property: @color1;
 
 // PUNCTUATION
 @punctuation: @grey;
@@ -137,8 +137,8 @@
 // HTML
 @tag: @color1;
 @tag-entity: @color1;
-@element-attr: @color2;
-@class: @color2;
-@id: @color2;
+@element-attr: @color1;
+@class: @color1;
+@id: @color1;
 @block: @color1;
 @inline: lighten(@color1, 25%);
