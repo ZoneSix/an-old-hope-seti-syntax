@@ -12,7 +12,7 @@
   "configSchema": {
     "dynamicColor": {
       "title": "Dynamic Theme",
-      "description": "Enable this to set syntax color dynamically based on seti ui theme.",
+      "description": "Enable this to set syntax ui color dynamically based on seti ui theme.",
       "type": "boolean",
       "default": true
     },
@@ -31,6 +31,24 @@
         "Yellow"
       ],
       "default": "Blue"
+    },
+    "themeStyle": {
+      "title": "More Old Hope",
+      "description": "Add more of An Old Hope's styling, beyond just syntax.",
+      "type": "boolean",
+      "default": false
+    },
+    "useLineHighlight": {
+      "title": "Line Highlight",
+      "description": "Highlight the entire line the at cursor",
+      "type": "boolean",
+      "default": true
+    },
+    "useThemeColor": {
+      "title": "An Old Hope Theme Color",
+      "description": "Apply theme colors to An Old Hope styling.",
+      "type": "boolean",
+      "default": false
     }
   }
 }
